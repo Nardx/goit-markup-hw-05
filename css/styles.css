@@ -107,6 +107,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -127,6 +128,7 @@ body {
   color: var(--accent-color3);
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover,
@@ -139,6 +141,7 @@ body {
   height: 12px;
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-phone-icon {
@@ -147,6 +150,7 @@ body {
   margin-left: 30px;
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover .contact-mail-icon,
@@ -200,6 +204,7 @@ body {
   color: var(--accent-color4);
   border: none;
   align-self: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-section-button:hover,
@@ -271,6 +276,27 @@ body {
   justify-content: space-between;
 }
 
+.about-section-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-section-subtitle {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  padding: 27px 0 27px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: rgb(47, 48, 58, 0.8);
+  color: #ffffff;
+}
+
 /* About section end */
 
 /*Team section */
@@ -333,6 +359,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-section-svg-item {
@@ -369,12 +396,14 @@ body {
   border: 1px solid var(--svg-icon-color);
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-customers-icon {
   fill: var(--svg-icon-color);
   width: 107px;
   height: 60px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-list-link:hover,
@@ -411,6 +440,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--accent-color4);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-footer-link {
@@ -420,6 +450,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-footer-link:hover,
@@ -462,6 +493,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: rgb(255, 2555, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-social-icon {
@@ -484,6 +516,17 @@ body {
 
 .link-menu-color {
   color: #2196f3;
+  position: relative;
+}
+
+.link-menu-color::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .logo-color {
@@ -526,6 +569,7 @@ body {
   background-color: var(--background-color);
   padding: 0 20px 0 20px;
   outline: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-web-design {
@@ -540,6 +584,33 @@ body {
   margin-top: 30px;
   margin-left: 30px;
   max-width: 370px;
+}
+
+.list-web-container-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.list-web-design-overlay {
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px 0 24px;
+  color: #ffffff;
+  background-color: rgb(33, 150, 243, 0.9);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-web-design-item:hover .list-web-design-overlay,
+.list-web-design-item:focus .list-web-design-overlay {
+  transform: translateY(0%);
 }
 
 .list-web-design-div {
@@ -579,3 +650,23 @@ body {
 }
 
 /*------------------SVG SECTION------------------*/
+
+/*------------------Modal window*----------------------*/
+/*
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  width: 528px;
+  height: 580px;
+  background-color: blanchedalmond;
+}
+*/
