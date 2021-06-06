@@ -27,7 +27,7 @@
           <a class="logo link" href="./index.html">Web<span class="logo-color">Studio</span></a>
           <ul class="menu list">
             <li class="menu-item">
-              <a class="menu-link link link-menu-color" href="#"> Студия</a>
+              <a class="menu-link link current" href="#"> Студия</a>
               <div class="active-page"></div>
             </li>
             <li class="menu-item">
@@ -66,7 +66,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-section-button" type="button">Заказать услугу</button>
+          <button class="hero-section-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -444,8 +444,13 @@
       </div>
     </footer>
 
-    <div class="backdrop">
-      <div class="modal"></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <svg class="modal-close-btn">
+          <use href="../images/sprite.svg#icon-close-btn1" data-modal-close></use>
+        </svg>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
