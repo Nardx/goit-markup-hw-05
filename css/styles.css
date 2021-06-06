@@ -166,16 +166,13 @@ body {
 /* Header end*/
 
 /* Hero section */
-.bck {
-  background-color: violet;
-}
 
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
   align-items: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero/hero.jg);
+    url(../images/hero/hero.jpg);
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
@@ -691,8 +688,8 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
